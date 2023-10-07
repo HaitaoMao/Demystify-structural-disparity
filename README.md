@@ -1,0 +1,1 @@
+This is related code for the paper [Demystifying Structural Disparity in Graph Neural Networks: Can One Size Fit All?](https://arxiv.org/abs/2306.01323)
