@@ -13,4 +13,3 @@ Recent studies on Graph Neural Networks(GNNs) provide both empirical and theoret
 
 Run the code with: `python3 main_backup.py --dataset Cora --algo_name SGCNet --expmode transductive`.
 
-More update soon~
