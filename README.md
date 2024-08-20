@@ -13,3 +13,63 @@ Recent studies on Graph Neural Networks(GNNs) provide both empirical and theoret
 
 Run the code with: `python3 main_backup.py --dataset Cora --algo_name SGCNet --expmode transductive`.
 
+### Requirements
+
+Dependencies (with python >= 3.9):
+Main dependencies are
+
+pytorch==1.13
+
+torch_geometric==2.2.0
+
+torch-scatter==2.1.1+pt113cpu
+
+torch-sparse==0.6.17+pt113cpu
+
+torch-spline-conv==1.2.2+pt113cpu
+
+
+Example commands to install the dependencies in a new conda environment (tested on a Linux machine without GPU).
+
+```
+conda create --name ss python=3.9
+conda activate ss
+conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 -c pytorch
+pip install torch_scatter torch_sparse torch_cluster torch_spline_conv -f https://data.pyg.org/whl/torch-1.13.0+cpu.html
+pip install torch_geometric
+```
+
+
+For GPU installation (assuming CUDA 11.8): 
+
+```
+conda create --name ss python=3.9
+conda activate ss
+conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+conda install pytorch-sparse -c pyg
+conda install pyg -c pyg
+```
+
+### Analsysis experiment 
+
+To run experiments
+
+```
+cd data_analysis
+conda activate ss
+python runners/run_analysis.py --mode 1
+```
+
+## Cite us
+
+If you found this work useful, please cite our paper
+
+```
+@article{mao2024demystifying,
+  title={Demystifying structural disparity in graph neural networks: Can one size fit all?},
+  author={Mao, Haitao and Chen, Zhikai and Jin, Wei and Han, Haoyu and Ma, Yao and Zhao, Tong and Shah, Neil and Tang, Jiliang},
+  journal={Advances in neural information processing systems},
+  volume={36},
+  year={2023}
+}
+```
